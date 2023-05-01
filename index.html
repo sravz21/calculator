@@ -1,71 +1,115 @@
-
 <html>
-<head>
-
-    <title>Calculator</title>
-    <style>
-        body{
-            background-image: linear-gradient(skyblue,darkblue)
-        }
-        .wrap{
-            width: 27%;
-            margin: auto;
-            height: auto;
-            background-color: black;
-            padding: 15px;
-        }
-        *{
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-        }
-        #inp1{
-            width: 100%;
-            font-size: 30px;
-            padding: 15px;
-            font-weight: bold;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-        input[type=button]{
-            font-size: 30px;
-            width: 89px;
-            padding: 10px;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        #del{
-            width: 100%;
-        }
-    </style>
-</head>
+	<head>
+		<title>Sample Application form</title>
+	</head>
 <body>
- <div class="wrap">
-    <form name="cal">
-        <input type="text" name="display" id="inp1"> 
-        <br><br>
-        <input type="button" value="9" onclick="cal.display.value+='9'">
-        <input type="button" value="8" onclick="cal.display.value+='8'">
-        <input type="button" value="7" onclick="cal.display.value+='7'">
-        <input type="button" value="+" onclick="cal.display.value+='+'">
-        <br><br>
-        <input type="button" value="6" onclick="cal.display.value+='6'">
-        <input type="button" value="5" onclick="cal.display.value+='5'">
-        <input type="button" value="4" onclick="cal.display.value+='4'">
-        <input type="button" value="-" onclick="cal.display.value+='-'">
-        <br><br>
-        <input type="button" value="3" onclick="cal.display.value+='3'">
-        <input type="button" value="2" onclick="cal.display.value+='2'">
-        <input type="button" value="1" onclick="cal.display.value+='1'">
-        <input type="button" value="*" onclick="cal.display.value+='*'">
-        <br><br>
-        <input type="button" value="0" onclick="cal.display.value+='0'">
-        <input type="button" value="/" onclick="cal.display.value+='/'">
-        <input type="button" value="%" onclick="cal.display.value+='%'">
-        <input type="button" value="=" onclick="cal.display.value= eval(cal.display.value)">
-        <br><br>
-        <input type="button" value="DELETE" onclick="cal.display.value= ' '" id="del">
-    </form>
-</div>
-</body>
+
+<!--1st part-->
+<fieldset style="width:800px;">
+	<table  style="font-size:20px;">
+	<tr>
+		<td>
+		<fieldset><legend style="font-size:20px;">First name</legend>
+		<input style="font-size:20px;"></fieldset>
+		</td>
+		<td>
+		<fieldset><legend style="font-size:20px;">Middle name</legend>
+		<input style="font-size:20px;"></fieldset>
+		</td>
+		<td>
+		<fieldset><legend style="font-size:20px;">Last name</legend>
+		<input style="font-size:20px;"></fieldset>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<fieldset><legend style="font-size:20px;">Select Degree and Stream</legend>
+		
+		<datalist id="degree" style="font-size:20px;">
+		<option>b.tech</option>
+		<option>degree</option>
+		<option>PG</option>
+		</datalist>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<label style="font-size:20px;"></label>
+		<select style="font-size:20px;">
+		<option>-select-</option>
+		<option>CSC</option>
+		<option>MECH</option>
+		<option>ECE</option>
+		<option>CIVIL</option>
+		<option>B.Sc.Comp sc</option>
+		<option>BCA</option>
+		<option>BBA</option>
+		<option>MSC.comp sci</option>
+		<option>MCA</option>
+		</select>
+		</fieldset>
+		</td>
+		<td>
+		<fieldset><legend style="font-size:20px;">Percentage</legend>
+		<input style="font-size:20px;" type="number">
+		</fieldset></td>
+		</tr>
+		</table>
+		
+		<!-- 2nd part-->
+		
+		<tr>
+		<td>
+		<fieldset>
+		<legend style="font-size:20px;">Final year project</legend></td></tr>
+		<table style="font-size:20px;">
+		<tr>
+			<td>Title</td>
+			<td><input></td>
+		</tr>
+		<tr>
+			<td>Role</td>	
+			<td><input></td>
+		</tr>
+			<tr>
+			<td>Description</td>	
+			<td><textarea></textarea></td>
+		</tr>
+		</table>
+		
+		</fieldset>
+		<!--3rd part-->
+		
+		<tr>
+			<td><fieldset>
+			<legend  style="font-size:20px;">Select Gender</legend>
+			<input type="radio" name="answer1"  style="font-size:20px;"><em style="font-size:20px;">Female</em></input>
+			<input type="radio" name="answer1"  style="font-size:20px;"><em style="font-size:20px;">Male</em></input>
+			<input type="radio" name="answer1"  style="font-size:20px;"><em style="font-size:20px;">Other</em></input>
+			</fieldset></td>
+			<td><fieldset>
+			<legend  style="font-size:20px;">Year of passout</legend>
+			<input type="date"  style="font-size:20px;">
+			</fieldset></td>
+		</tr>
+		<tr>
+			<td><fieldset>
+			<legend  style="font-size:20px;">Choose Programming Languages</legend>
+			<input type="checkbox"  style="font-size:20px;">C
+			<input type="checkbox"  style="font-size:20px;">CPP
+			<input type="checkbox"  style="font-size:20px;">JAVA
+			<input type="checkbox"  style="font-size:20px;">PYTHON
+			<input type="checkbox"  style="font-size:20px;">C#
+			</fieldset>
+			</td>
+			<td>
+			<input type="submit"  style="font-size:20px;">
+			</td>
+		</tr>
+		
+
+
+
+
+</fieldset>
+</table>
+
 </html>
+</body>
+
